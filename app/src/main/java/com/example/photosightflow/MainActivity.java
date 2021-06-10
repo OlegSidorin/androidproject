@@ -9,8 +9,6 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 
@@ -34,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         webView = findViewById(R.id.webView);
         frvBtn = findViewById(R.id.frvBtn);
         bckBtn = findViewById(R.id.bckBtn);
-        frvBtn = findViewById(R.id.frv10Btn);
-        bckBtn = findViewById(R.id.bck10Btn);
+        frv10Btn = findViewById(R.id.frv10Btn);
+        bck10Btn = findViewById(R.id.bck10Btn);
         webView.setWebViewClient(new WebViewClient());
         num = String.valueOf(number);
 

@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     String scr = "";
     private Button frvBtn;
     private Button bckBtn;
+    private Button frv10Btn;
+    private Button bck10Btn;
     private TextView textView;
 
     @Override
@@ -32,27 +34,11 @@ public class MainActivity extends AppCompatActivity {
         webView = findViewById(R.id.webView);
         frvBtn = findViewById(R.id.frvBtn);
         bckBtn = findViewById(R.id.bckBtn);
-        textView = findViewById(R.id.textView);
+        frvBtn = findViewById(R.id.frv10Btn);
+        bckBtn = findViewById(R.id.bck10Btn);
         webView.setWebViewClient(new WebViewClient());
         num = String.valueOf(number);
-        String title = "privet";
-/*
-        Document doc = null;
-        try {
-            doc = Jsoup.connect("http://example.com/").get();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
-
-        title = doc.title();
-
-        if (title == null) {
-            title = "rrrrrr";
-        }
-        textView.setText(title);
-
- */
         webView.loadUrl("https://photosight.ru/photo/alone/" + num);
         frvBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +52,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 number -= 1;
+                num = String.valueOf(number);
+                webView.loadUrl("https://photosight.ru/photo/alone/" + num);
+            }
+        });
+        frv10Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                number += 10;
+                num = String.valueOf(number);
+                webView.loadUrl("https://photosight.ru/photo/alone/" + num);
+            }
+        });
+        bck10Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                number -= 10;
                 num = String.valueOf(number);
                 webView.loadUrl("https://photosight.ru/photo/alone/" + num);
             }

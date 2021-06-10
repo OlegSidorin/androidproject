@@ -18,11 +18,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+
     </WebView>
 
     <Button
         android:id="@+id/frvBtn"
-        android:layout_width="100dp"
+        android:layout_width="60dp"
         android:layout_height="100dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
@@ -36,7 +37,7 @@
 
     <Button
         android:id="@+id/bckBtn"
-        android:layout_width="100dp"
+        android:layout_width="60dp"
         android:layout_height="100dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
@@ -48,19 +49,33 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="114dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="16dp"
-        android:layout_x="175dp"
-        android:layout_y="665dp"
-        android:text="TextView"
-        android:textColor="#E91E63"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <Button
+        android:id="@+id/bck10Btn"
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:background="#00FFFFFF"
+        android:drawableLeft="@android:drawable/ic_media_previous"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/bckBtn"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/frv10Btn"
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:background="#00FFFFFF"
+        android:drawableRight="@android:drawable/ic_media_next"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/frvBtn"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
